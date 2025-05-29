@@ -1,60 +1,128 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Diz&Dat</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diz&Dat – Stylish Fashion & Accessories</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
 
-  <header>
-    <img src="https://i.postimg.cc/XqwhLjPz/Screenshot-30.png" alt="Header Background" class="header-bg" />
-    <div class="header-content">
-      <h1>Welcome to Diz&Dat</h1>
-      <p>Stylish Jallabiyas, Perfumes, Caps & Shoes</p>
-      <a href="https://www.instagram.com/diz_and_dat_by_abduooll?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="shop-button" target="_blank">Shop Now</a>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .product:hover .price-overlay {
+      opacity: 1;
+    }
+
+    .price-overlay {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Header Section -->
+  <header class="relative h-screen flex items-center justify-center bg-gradient-to-r from-purple-900 to-pink-700 text-white overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://i.postimg.cc/XqwhLjPz/Screenshot-30.png" alt="Header Background" class="object-cover w-full h-full opacity-40">
+    </div>
+    <div class="z-10 text-center px-4">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">Welcome to Diz&Dat</h1>
+      <p class="text-xl md:text-2xl mb-8">Stylish Jallabiyas, Perfumes, Caps & Shoes</p>
+      <a href="https://www.instagram.com/diz_and_dat_by_abduooll" target="_blank" class="inline-block bg-white text-purple-900 font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-purple-100 transition transform hover:scale-105">
+        <i class="fab fa-instagram mr-2"></i> Shop Now
+      </a>
     </div>
   </header>
 
-  <section class="products">
-    <h2>Our Products</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="https://i.postimg.cc/pdHvMSf8/photo-5848279847263127651-x.jpg" alt="Jallabiyas" />
-        <p>Jallabiyas</p>
-      </div>
-      <div class="product">
-        <img src="https://i.postimg.cc/7hLvHGZr/Screenshot-61.png" alt="Perfumes" />
-        <p>Perfumes</p>
-      </div>
-      <div class="product">
-        <img src="https://i.postimg.cc/mrN2h9BP/Screenshot-62.png" alt="Caps" />
-        <p>Caps</p>
-      </div>
-      <div class="product">
-        <img src="https://i.postimg.cc/rsx6HCDg/photo-5848279847263127652-y.jpg" alt="Shoes" />
-        <p>Shoes</p>
+  <!-- Products Section -->
+  <section class="py-20 bg-white" id="products">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Products</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <!-- Jallabiyas -->
+        <div class="product group relative overflow-hidden rounded-lg shadow-lg">
+          <img src="https://i.postimg.cc/pdHvMSf8/photo-5848279847263127651-x.jpg" alt="Jallabiyas" class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-xl text-gray-800">Jallabiyas</h3>
+            <p class="text-gray-600">₦13,500 each</p>
+          </div>
+        </div>
+        <!-- Perfumes -->
+        <div class="product group relative overflow-hidden rounded-lg shadow-lg">
+          <img src="https://i.postimg.cc/7hLvHGZr/Screenshot-61.png" alt="Perfumes" class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-xl text-gray-800">Perfumes</h3>
+            <p class="text-gray-600">₦3,500 – ₦6,500</p>
+          </div>
+        </div>
+        <!-- Caps -->
+        <div class="product group relative overflow-hidden rounded-lg shadow-lg">
+          <img src="https://i.postimg.cc/mrN2h9BP/Screenshot-62.png" alt="Caps" class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-xl text-gray-800">Caps</h3>
+            <p class="text-gray-600">₦5,500 each</p>
+          </div>
+        </div>
+        <!-- Shoes -->
+        <div class="product group relative overflow-hidden rounded-lg shadow-lg">
+          <img src="https://i.postimg.cc/rsx6HCDg/photo-5848279847263127652-y.jpg" alt="Shoes" class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-xl text-gray-800">Shoes</h3>
+            <p class="text-gray-600">₦9,000 per pair</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="ceo">
-    <h2>Meet the CEO</h2>
-    <div class="ceo-image">
-      <img src="https://i.postimg.cc/c4t6sVn5/Screenshot-59.png" alt="CEO of Diz&Dat" />
+  <!-- CEO Section -->
+  <section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-gray-800 mb-12">Meet the CEO</h2>
+      <div class="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-white">
+        <img src="https://i.postimg.cc/c4t6sVn5/Screenshot-59.png" alt="CEO of Diz&Dat" class="w-full h-full object-cover">
+      </div>
+      <h3 class="text-2xl font-semibold text-gray-700 mt-6">Abduooll</h3>
+      <p class="text-gray-600 mt-2">Founder of Diz&Dat</p>
     </div>
   </section>
 
-  <section class="review">
-    <h2>What Our Customers Say</h2>
-    <img src="https://i.postimg.cc/Y0McJLQH/Screenshot-60.png" alt="Customer Review" />
+  <!-- Review Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-gray-800 mb-12">What Our Customers Say</h2>
+      <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-xl shadow-lg">
+        <img src="https://i.postimg.cc/Y0McJLQH/Screenshot-60.png" alt="Customer Review" class="rounded-lg shadow mb-6 w-full">
+        <p class="italic text-gray-700">"Absolutely love the quality and design of the Jallabiyas. Highly recommend!"</p>
+        <p class="mt-4 font-semibold text-gray-800">– Satisfied Customer</p>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <h3>Contact Us</h3>
-    <p>📍 No 8 Homan Road, Old GRA, Maiduguri</p>
-    <p>📱 Instagram: <a href="https://www.instagram.com/diz_and_dat_by_abduooll?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">@diz_and_dat_by_abduooll</a></p>
+  <!-- Contact Section -->
+  <section class="py-20 bg-gradient-to-r from-purple-900 to-pink-700 text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-8">Contact Us</h2>
+      <p class="text-lg mb-2"><i class="fas fa-map-marker-alt mr-2"></i>No 8 Homan Road, Old GRA, Maiduguri</p>
+      <p class="text-lg">
+        <i class="fab fa-instagram mr-2"></i>
+        <a href="https://www.instagram.com/diz_and_dat_by_abduooll" class="underline" target="_blank">@diz_and_dat_by_abduooll</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>&copy; 2025 Diz&Dat. All rights reserved.</p>
   </footer>
 
 </body>
